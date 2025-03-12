@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskMaster</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="auth-container" id="auth-container">
+    <div class="auth-box">
+      <h1>📋 TaskMaster</h1>
+      <form id="login-form">
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Mot de passe" required>
+        <button type="submit">Se connecter</button>
+      </form>
+      <p>Nouvel utilisateur? <a href="#" id="switch-to-signup">Créer un compte</a></p>
+    </div>
+  </div>
+
+  <div class="tasks-container" id="tasks-container">
+    <header>
+      <h1>🎯 Mes Tâches</h1>
+      <button id="logout-btn">Déconnexion</button>
+    </header>
+    
+    <div class="add-task">
+      <input type="text" id="new-task" placeholder="Nouvelle tâche...">
+      <button id="add-task-btn">➕ Ajouter</button>
+    </div>
+
+    <div class="tasks-list" id="tasks-list">
+      <!-- Les tâches seront chargées ici -->
+    </div>
+  </div>
+
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
